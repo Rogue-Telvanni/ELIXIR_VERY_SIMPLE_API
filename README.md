@@ -8,7 +8,7 @@ docker pull postgres
 then set up the container configuration
 docker run --name bs_db -p 5432:5432 -e POSTGRES_USER=seu_user -e POSTGRES_PASSWORD=sua_senha -d postgres
 
-update or download hex
+update or download hex (dependency manager)
 mix local.hex
 
 install phoenix server for the project
@@ -16,17 +16,23 @@ mix archive.install hex phx_new
 
 on the project directory with the terminal run the following commands
 mix deps.get
-mix ecto.create
 
+mix ecto.create(creates a database and connects with the db)
+
+creates the user schema(table) and controller this part is not necessary to run,
 mix phx.gen.json Clients Client clients name:string document:integer address:string phone:integer
+
+create the table on the db
 mix ecto.migrate
 
-mix phx.server
-testar usando o iex
+
+test using iex
 iex -S mix
 cria o json
 ApiTest.Clients.create_client(%{name: "TESTE", document:202521425})
 
+run the api
+mix phx.server
 to run the api use the localhost on port 4000
 the endpoints for the client are
 POST http://localhost:4000/api/clients/create
