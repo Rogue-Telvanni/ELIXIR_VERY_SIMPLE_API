@@ -41,5 +41,14 @@ with the following json
 	}
 }
 
+![Screenshot from 2024-05-23 22-37-06](https://github.com/Rogue-Telvanni/ELIXIR_VERY_SIMPLE_API/assets/110510237/1a9fcc59-c11e-4e22-a343-004fafe16c87)
+
 and for recovering a client using the document data
 GET http://localhost:4000/api/clients/225489797
+
+![Screenshot from 2024-05-23 22-49-58](https://github.com/Rogue-Telvanni/ELIXIR_VERY_SIMPLE_API/assets/110510237/b0f21fd2-7ae0-4814-84d0-4d8381484fab)
+
+for recovering all clients simple use 
+GET http://localhost:4000/api/clients/
+
+![Screenshot from 2024-05-23 23-19-22](https://github.com/Rogue-Telvanni/ELIXIR_VERY_SIMPLE_API/assets/110510237/b7a9eef8-0650-490c-a43c-2daa45ad3e58)
